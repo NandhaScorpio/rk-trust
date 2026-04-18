@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from "../img/logo2.jpg"
 import phone from "../img/phone-solid-full.svg"
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,22 +12,22 @@ const Navbar = () => {
                 <div className="flex flex-col justify-between h-16">
                     <div className="">
                         <div className="mr-2 flex-shrink-0 flex items-center justify-between">
-                            <a href="/" className="flex items-center gap-8 group">
+                            <Link to={"/"} className="flex items-center gap-8 group">
                                 <img src={logo} alt="logo" className='w-60 h-30' />
-                            </a>
-                            <a href="#" className='flex gap-2 py-2 items-center border-2 border-black rounded-2xl'>
+                            </Link>
+                            <button className='flex gap-2 py-2 items-center border-2 border-black rounded-2xl'>
                                 <img src={phone} alt="phone" className='w-8 h-8' />
                                 <span className='text-lg font-medium pr-2 text-black'>+91 96295 53775</span>
-                            </a>
+                            </button>
                         </div>
 
                         {/* Desktop Menu */}
                         <div className="hidden md:flex items-center space-x-8 bg-blue-400 my-5 py-4" >
-                            <a href="/" className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Home</a>
-                            <a href="/about-us" className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">About Us</a>
-                            <a href="/services" className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Services</a>
-                            <a href="/contact" className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Contact</a>
-                            <a href="/gallery" className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Gallery</a>
+                            <Link to={"/"} className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Home</Link>
+                            <Link to={"/about-us"} className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">About Us</Link>
+                            <Link to={"/services"} className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Services</Link>
+                            <Link to={"/contact"} className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Contact</Link>
+                            <Link to={"/gallery"} className="block px-3 py-2  rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50  dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Gallery</Link>
                         </div>
                     </div>
 
@@ -58,11 +59,11 @@ const Navbar = () => {
                     }`}
             >
                 <div className="px-4 pt-2 pb-4 space-y-1 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-200 dark:border-slate-800">
-                    <a href="/" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Home</a>
-                    <a href="/about-us" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">About Us</a>
-                    <a href="/services" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Services</a>
-                    <a href="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Contact</a>
-                    <a href="/gallery" className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Gallery</a>
+                    <Link to={"/"} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Home</Link>
+                    <Link to={"/about-us"} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">About Us</Link>
+                    <Link to={"/services"} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Services</Link>
+                    <Link to={"/contact"}className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Contact</Link>
+                    <Link to={"/gallery"}className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-slate-800 transition-colors duration-200">Gallery</Link>
                 </div>
             </div>
         </nav>

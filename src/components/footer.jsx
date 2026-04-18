@@ -24,9 +24,9 @@ const Footer = () => {
                                 const href = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
                                 return (
                                     <li key={item}>
-                                        <a href={href} className="text-slate-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+                                        <Link to={href} className="text-slate-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
                                             <span className="mr-2 text-blue-500">›</span> {item}
-                                        </a>
+                                        </Link>
                                     </li>
                                 );
                             })}
